@@ -46,7 +46,7 @@ d-i apt-setup/universe boolean true
 
 # Users
 d-i passwd/user-fullname string NessVMS
-d-i passwd/username string NessVMS
+d-i passwd/username string nessvms
 d-i passwd/user-password-crypted password $6$rYxC4lmsNG$kXTkZbv.Hsac9JjGZDbXbiEEvZ8IMjziT65RC83pYszEF2I8klgDf2vBx/9SWVxfDPJAKeHina2IbNAMCKakQ/
 d-i passwd/user-default-groups string adm audio cdrom dip lpadmin sudo plugdev sambashare video
 d-i passwd/root-login boolean true
