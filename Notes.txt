@@ -1,12 +1,20 @@
 #Command to make Iso
-sudo mkisofs -D -r -V "NessVMS-Ubuntu" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ~/NessVMS-Unattended.iso ~/preseed_ubuntu.
+sudo mkisofs -D -r -V "NessVMS-Ubuntu" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ~/NessVMS-Unattended.iso ~/preseed_ubuntu
+
+#Write ISO to USB
+sudo bootiso NessVMS-Unattended.iso
+
+#Dependencies
+https://github.com/jsamr/bootiso
+
 
 #Reference Links
-https://github.com/jsamr/bootiso#distro-tweaks
 
 https://launchpad.net/cubic
 
 https://github.com/jsamr/bootiso#quick-install
+
+https://github.com/jsamr/bootiso#distro-tweaks
 
 https://vitux.com/how-to-create-a-bootable-usb-stick-from-the-ubuntu-terminal/
 
