@@ -63,10 +63,10 @@ d-i cdrom-detect/eject boolean true
 
 # Custom Commands
 d-i preseed/late_command string \
+  in-target hostnamectl set-hostname NessVMS-$RANDOM
   in-target rm -rf /var/lib/apt/lists ; \
   in-target apt-get update ; \
   in-target apt-get -y upgrade ; \
   in-target apt-get -y autoremove ; \
   in-target apt-get autoclean ; \
   in-target apt-get clean
-  in-target hostnamectl set-hostname NessVMS-$RANDOM
