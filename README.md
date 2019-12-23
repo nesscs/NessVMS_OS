@@ -28,7 +28,7 @@ sudo cp -rT /mnt/iso ~/preseed_ubuntu
 ## Make the files editable 
 We can do that by using `chmod`:
 ```
-sudo chmod -R ~/preseed_ubuntu
+sudo chmod 777 -R ~/preseed_ubuntu
 ```
 
 ## Add in necessary Edited files
