@@ -68,3 +68,4 @@ d-i preseed/late_command string \
   in-target apt-get -y autoremove ; \
   in-target apt-get autoclean ; \
   in-target apt-get clean
+  in-target hostnamectl set-hostname NessVMS-$RANDOM
