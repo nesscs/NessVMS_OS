@@ -60,3 +60,5 @@ d-i grub-installer/with_other_os boolean true
 d-i grub-installer/bootdev  string /dev/sda
 d-i finish-install/reboot_in_progress note
 
+# Custom Commands
+# ubiquity ubiquity/success_command \
