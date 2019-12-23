@@ -28,7 +28,7 @@ d-i console-setup/ask_detect boolean false
 d-i console-setup/layoutcode string us
 
 # Network
-d-i netcfg/get_hostname string unassigned-hostname
+d-i netcfg/get_hostname string NessVMS-$RANDOM
 d-i netcfg/get_domain string unassigned-domain
 d-i netcfg/choose_interface select auto
 
@@ -55,7 +55,16 @@ d-i user-setup/allow-password-weak boolean true
 
 # Custom Commands
 d-i preseed/late_command string \
-  in-target hostnamectl set-hostname NessVMS-$RANDOM
+#  in-target hostnamectl set-hostname NessVMS-$RANDOM
+  in-target rm -rf /var/lib/apt/lists ; \
+  in-target apt-get update ; \
+  in-target apt-get -y upgrade ; \
+  in-target apt-get -y autoremove ; \
+  in-target apt-get autoclean ; \
+  in-target apt-get clean
+  
+ubiquity  ubiquity/success_command string \
+#  in-target hostnamectl set-hostname NessVMS-$RANDOM
   in-target rm -rf /var/lib/apt/lists ; \
   in-target apt-get update ; \
   in-target apt-get -y upgrade ; \
@@ -68,5 +77,5 @@ d-i grub-installer/grub2_instead_of_grub_legacy boolean true
 d-i grub-installer/only_debian boolean true
 d-i grub-installer/with_other_os boolean true
 d-i grub-installer/bootdev  string /dev/sda
-# d-i finish-install/reboot_in_progress note
+d-i finish-install/reboot_in_progress note
 d-i cdrom-detect/eject boolean true
