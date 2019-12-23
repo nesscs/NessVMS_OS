@@ -1,8 +1,20 @@
 # NxVMS_OS Install
-Working files and tools for creating an unattended Ubuntu LTS Install. You will need the latest LTS Image from Ubuntu
+Working files and tools for creating an unattended Ubuntu LTS Install. You will need the latest LTS ISO from Ubuntu
+
+# Warning
+This will create a bootable linux usb install disk that will wipe any computer that boots it automatically, don't leave it in a machine you don't want to wipe.
+
+## Download Dependencies
+Download some tools to get your environment ready
+```
+sudo apt install git mtools syslinux wimtools -y
+```
+
+## Download Ubuntu
+Go to http://releases.ubuntu.com/ and Select the latest LTS Desktop Image, download it to ~/Downloads
 
 ## Mount the ISO File
-You will need to mount the ISO files so that you can edit the pertinent files. Substitute the file names for relevant files
+You will need to mount the ISO file so that you can edit the pertinent files. Substitute the file names for relevant files
 ```
 mkdir -p /mnt/iso
 mount -o loop ~/Downloads/ubuntu-18.04.3-desktop-amd64.iso /mnt/iso
@@ -25,9 +37,8 @@ There are 3 modified files that are required:
 /isolinux/txt.cfg
 /preseed/nessvms.seed
 
-Clone the Git Repository to download these files
+Clone this Git Repository to download these files
 ```
-sudo apt install git
 cd
 mkdir -p ~/git
 cd git
@@ -41,26 +52,27 @@ cp ~/git/NxVMS_OS/isolinux/txt.cfg ~/preseed_ubuntu/isolinux/txt.cfg
 cp ~/git/NxVMS_OS/preseed/nessvms.seed ~/preseed_ubuntu/preseed/nessvms.seed
 ```
 
-## Get tools to make the USB Disk
+## Set up tool to make the USB Disk
 ```
 cd
-sudo apt install mtools syslinux wimtools -y
 wget https://git.io/bootiso
 chmod +x bootiso
 sudo mv bootiso /usr/local/sbin/
-sudo apt install mtools syslinux
 ```
+
 ## Create new iso file
 ```
-sudo mkisofs -D -r -V "UNATTENDED_UBUNTU" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ~/ubuntu16-unattended-install.iso ~/preseed_ubuntu
+sudo mkisofs -D -r -V "NessVMS_OS" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ~/NessVMS-Unattended.iso ~/preseed_ubuntu
 ```
-## Burning the iso file to USB
+
+## Burn the iso file to USB
+Insert a USB Stick in to the machine follow the prompts to write the ISO to it.
 ```
 sudo bootiso NessVMS-Unattended.iso
 ```
 
 Congratulations, You're done.
-Now, test the iso file on a virtual machine.
+Try the disk out on a new machine.
 
 #### Bug or suggestion?
 Feel free to report any problem :)
