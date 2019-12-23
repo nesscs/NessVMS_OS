@@ -16,14 +16,14 @@ Go to http://releases.ubuntu.com/ and Select the latest LTS Desktop Image, downl
 ## Mount the ISO File
 You will need to mount the ISO file so that you can edit the pertinent files. Substitute the file names for relevant files
 ```
-mkdir -p /mnt/iso
-mount -o loop ~/Downloads/ubuntu-18.04.3-desktop-amd64.iso /mnt/iso
+sudo mkdir -p /mnt/iso
+sudo mount -o loop ~/Downloads/ubuntu-18.04.3-desktop-amd64.iso /mnt/iso
 ```
 ## Copy the Files
 Now you need to copy the mounted files so that you can edit it. Do it by:
 ```
-mkdir -p ~/preseed_ubuntu
-cp -rT /mnt/iso ~/preseed_ubuntu
+sudo mkdir -p ~/preseed_ubuntu
+sudo cp -rT /mnt/iso ~/preseed_ubuntu
 ````
 ## Make the files editable 
 We can do that by using `chmod`:
