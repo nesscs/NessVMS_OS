@@ -56,5 +56,15 @@ d-i user-setup/allow-password-weak boolean true
 # Grub
 d-i grub-installer/grub2_instead_of_grub_legacy boolean true
 d-i grub-installer/only_debian boolean true
+d-i grub-installer/with_other_os boolean true
+d-i grub-installer/bootdev  string /dev/sda
 d-i finish-install/reboot_in_progress note
 
+# Custom Commands
+d-i preseed/late_command string \
+  in-target rm -rf /var/lib/apt/lists ; \
+  in-target apt-get update ; \
+  in-target apt-get -y upgrade ; \
+  in-target apt-get -y autoremove ; \
+  in-target apt-get autoclean ; \
+  in-target apt-get clean
