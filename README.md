@@ -47,9 +47,9 @@ git clone https://github.com/kvellaNess/NxVMS_OS.git
 
 Copy the modified files to the working directory
 ```
-cp ~/git/NxVMS_OS/boot/grub/grub.cfg ~/preseed_ubuntu/boot/grub/grug.cfg
-cp ~/git/NxVMS_OS/isolinux/txt.cfg ~/preseed_ubuntu/isolinux/txt.cfg
-cp ~/git/NxVMS_OS/preseed/nessvms.seed ~/preseed_ubuntu/preseed/nessvms.seed
+cp ~/git/NxVMS_OS/boot/grub/grub.cfg ~/preseed_ubuntu/boot/grub/grub.cfg -r
+cp ~/git/NxVMS_OS/isolinux/txt.cfg ~/preseed_ubuntu/isolinux/txt.cfg -r
+cp ~/git/NxVMS_OS/preseed/nessvms.seed ~/preseed_ubuntu/preseed/nessvms.seed -r
 ```
 
 ## Set up tool to make the USB Disk
