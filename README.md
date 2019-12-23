@@ -1,5 +1,5 @@
 # NxVMS_OS Install
-Working files and tools for creating an unattended Ubuntu LTS Install. You will need the latest LTS ISO from Ubuntu
+Working files and tools for creating an unattended Ubuntu LTS Install. You will need to be running linux on your machine or a VM to create the bootable disk, the commands below will guide you.
 
 # Warning
 This will create a bootable linux usb install disk that will wipe any computer that boots it automatically, don't leave it in a machine you don't want to wipe.
