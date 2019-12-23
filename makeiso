@@ -1,0 +1,9 @@
+cd ~/Github/NxVMS_OS/
+git pull
+cd
+cp ~/Github/NxVMS_OS/boot/grub/grub.cfg ~/preseed_ubuntu/boot/grub/grub.cfg -r
+cp ~/Github/NxVMS_OS/isolinux/txt.cfg ~/preseed_ubuntu/isolinux/txt.cfg -r
+cp ~/Github/NxVMS_OS/preseed/nessvms.seed ~/preseed_ubuntu/preseed/nessvms.seed -r
+sudo mkisofs -D -r -V "NessVMS-Ubuntu" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ~/NessVMS-Unattended.iso ~/preseed_ubuntu
+
+sudo bootiso -ay NessVMS-Unattended.iso
