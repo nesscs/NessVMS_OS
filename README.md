@@ -38,25 +38,49 @@ sudo mkdir -p ~/cubic_ubuntu
 
 ## Run Cubic
 Launch Cubic from the dock or application menu.
-<img src="readme_images/cubic01.png" width="70%" >
 
 Select the working directory as ~/cubic_ubuntu
-<img src="readme_images/cubic02.png" >
+<img src="readme_images/cubic01.png" width="70%" >
+<img src="readme_images/cubic02.png" width="70%" >
 
 ## Select the Ubuntu LTS iso you just downloaded
+<img src="readme_images/cubic03.png" width="70%" >
+<img src="readme_images/cubic04.png" width="70%" >
 
-## Customise the release as you wish
+## Customise the release as you wish and press next
+<img src="readme_images/cubic05.png" width="70%" >
 
 ## Skip past the terminal modification screen
+<img src="readme_images/cubic06.png" width="70%" >
 
 ## Add preseed file
+These steps are *critical* that you compelte correctly. Add a new preseed file and call it ```nessvms.seed``` Open up the file manager and navigate to home\git\preseed. Open the nessvms.seed file and copy and paste the contents back in to cubic in to the new entry you have created.
+<img src="readme_images/cubic07.png" width="70%" >
+<img src="readme_images/cubic08.png" width="70%" >
 
 ## Edit Boot configuration files
+Similarly we must overwrite the 3 Boot config files contents with the contents of the files in  those that are in home\git\boot & home\git\isolinux
+
+Completely overwrite and replace all the text in the existing files with the text from the git folder files
+<img src="readme_images/cubic09.png" width="70%" >
+Once you have done that you can click Generate
 
 ## Generate USB ISO
+The new OS Image ISO will now be generated and placed inside home/cubic_ubuntu
+<img src="readme_images/cubic10.png" width="70%" >
+
+Once complete you may choose to delete the working files
+<img src="readme_images/cubic11.png" width="70%" >
+
 
 ## Write USB ISO To USB Stick
+Now that the ISO is created, open the file manager, navigate to home/cubic_ubuntu
+Right click on the new image file and Open with Disk Image Writer
+<img src="readme_images/cubic12.png" width="70%" >
 
+Write the file to a blank USB Stick that is larger than 4gb
+<img src="readme_images/cubic13.png" width="70%" >
+<img src="readme_images/cubic14.png" width="70%" >
 
 
 Congratulations, You're done.
