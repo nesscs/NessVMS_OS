@@ -1,37 +1,23 @@
 # NxVMS_OS Install
-Working files and tools for creating an unattended Ubuntu LTS Install. You will need to be running linux on your machine or a VM to create the bootable disk, the commands below will guide you.
+Working files and tools for creating an unattended Ubuntu LTS Install. You will need to be running linux on your machine or a VM to create the bootable disk, the commands below will guide you. 
+
+MAKE SURE YOU HAVE ATLEAST 20gb SPACE AVAILABLE ON YOUR SYSTEM HDD
 
 # Warning
 This will create a bootable linux usb install disk that will wipe any computer that boots it automatically, don't leave it in a machine you don't want to wipe.
 
-## Download Dependencies
+## Download Cubic Tool to create the ISO
 Download some tools to get your environment ready
 ```
-sudo apt install git mtools syslinux wimtools -y
+sudo apt-add-repository ppa:cubic-wizard/release
+sudo apt update
+sudo apt install cubic
 ```
 
 ## Download Ubuntu
 Go to http://releases.ubuntu.com/ and Select the latest LTS Desktop Image, download it to ~/Downloads
 
-## Mount the ISO File
-You will need to mount the ISO file so that you can edit the pertinent files. Substitute the file names for relevant files
-```
-sudo mkdir -p /mnt/iso
-sudo mount -o loop ~/Downloads/ubuntu-18.04.3-desktop-amd64.iso /mnt/iso
-```
-## Copy the Files
-Now you need to copy the mounted files so that you can edit it. Do it by:
-```
-sudo mkdir -p ~/preseed_ubuntu
-sudo cp -rT /mnt/iso ~/preseed_ubuntu
-````
-## Make the files editable 
-We can do that by using `chmod`:
-```
-sudo chmod 777 -R ~/preseed_ubuntu
-```
-
-## Add in necessary Edited files
+## Download necessary boot files to automate installation
 There are 3 modified files that are required:
 /boot/grub/grub.cfg
 /isolinux/txt.cfg
@@ -45,31 +31,30 @@ cd git
 git clone https://github.com/kvellaNess/NxVMS_OS.git
 ```
 
-Copy the modified files to the working directory
+Create a working Directory
 ```
-cp ~/git/NxVMS_OS/boot/grub/grub.cfg ~/preseed_ubuntu/boot/grub/grub.cfg -r
-cp ~/git/NxVMS_OS/isolinux/txt.cfg ~/preseed_ubuntu/isolinux/txt.cfg -r
-cp ~/git/NxVMS_OS/preseed/nessvms.seed ~/preseed_ubuntu/preseed/nessvms.seed -r
+sudo mkdir -p ~/cubic_ubuntu
 ```
 
-## Set up tool to make the USB Disk
-```
-cd
-wget https://git.io/bootiso
-chmod +x bootiso
-sudo mv bootiso /usr/local/sbin/
-```
+## Run Cubic
+Launch Cubic from the dock or application menu.
+Select the working directory as ~/cubic_ubuntu
 
-## Create new iso file
-```
-sudo mkisofs -D -r -V "NessVMS_OS" -cache-inodes -J -l -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -o ~/NessVMS-Unattended.iso ~/preseed_ubuntu
-```
+## Select the Ubuntu LTS iso you just downloaded
 
-## Burn the iso file to USB
-Insert a USB Stick in to the machine follow the prompts to write the ISO to it.
-```
-sudo bootiso NessVMS-Unattended.iso
-```
+## Customise the release as you wish
+
+## Skip past the terminal modification screen
+
+## Add preseed file
+
+## Edit Boot configuration files
+
+## Generate USB ISO
+
+## Write USB ISO To USB Stick
+
+
 
 Congratulations, You're done.
 Try the disk out on a new machine.
