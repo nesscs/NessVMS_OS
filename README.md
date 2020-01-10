@@ -38,7 +38,10 @@ sudo mkdir -p ~/cubic_ubuntu
 
 ## Run Cubic
 Launch Cubic from the dock or application menu.
+<img src="readme_images/cubic01.png" >
+
 Select the working directory as ~/cubic_ubuntu
+<img src="readme_images/cubic02.png" >
 
 ## Select the Ubuntu LTS iso you just downloaded
 
