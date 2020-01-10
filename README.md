@@ -92,7 +92,7 @@ Write the file to a blank USB Stick that is larger than 4gb
 
 
 Congratulations, You're done.
-Try the disk out on a new machine.
+Try the disk out on a new machine. REMEMBER this disk will wipe the contents of any machine you commence the install on.
 
 #### Bug or suggestion?
 Feel free to report any problem :)
