@@ -40,6 +40,7 @@ sudo mkdir -p ~/cubic_ubuntu
 Launch Cubic from the dock or application menu.
 
 Select the working directory as ~/cubic_ubuntu
+
 <img src="readme_images/cubic01.png" width="70%" >
 <img src="readme_images/cubic02.png" width="70%" >
 
@@ -55,6 +56,7 @@ Select the working directory as ~/cubic_ubuntu
 
 ## Add preseed file
 These steps are *critical* that you compelte correctly. Add a new preseed file and call it ```nessvms.seed``` Open up the file manager and navigate to home\git\preseed. Open the nessvms.seed file and copy and paste the contents back in to cubic in to the new entry you have created.
+
 <img src="readme_images/cubic07.png" width="70%" >
 <img src="readme_images/cubic08.png" width="70%" >
 
@@ -62,23 +64,29 @@ These steps are *critical* that you compelte correctly. Add a new preseed file a
 Similarly we must overwrite the 3 Boot config files contents with the contents of the files in  those that are in home\git\boot & home\git\isolinux
 
 Completely overwrite and replace all the text in the existing files with the text from the git folder files
+
 <img src="readme_images/cubic09.png" width="70%" >
+
 Once you have done that you can click Generate
 
 ## Generate USB ISO
 The new OS Image ISO will now be generated and placed inside home/cubic_ubuntu
+
 <img src="readme_images/cubic10.png" width="70%" >
 
 Once complete you may choose to delete the working files
+
 <img src="readme_images/cubic11.png" width="70%" >
 
 
 ## Write USB ISO To USB Stick
 Now that the ISO is created, open the file manager, navigate to home/cubic_ubuntu
 Right click on the new image file and Open with Disk Image Writer
+
 <img src="readme_images/cubic12.png" width="70%" >
 
 Write the file to a blank USB Stick that is larger than 4gb
+
 <img src="readme_images/cubic13.png" width="70%" >
 <img src="readme_images/cubic14.png" width="70%" >
 
