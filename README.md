@@ -14,6 +14,13 @@ sudo apt update
 sudo apt install cubic
 ```
 
+## Download Git
+We need Git to download some of the working files
+```
+sudo apt install git
+
+```
+
 ## Download Ubuntu
 Go to http://releases.ubuntu.com/ and Select the latest LTS Desktop Image, download it to ~/Downloads
 
@@ -61,7 +68,12 @@ These steps are *critical* that you compelte correctly. Add a new preseed file a
 <img src="readme_images/cubic08.png" width="70%" >
 
 ## Edit Boot configuration files
-Similarly we must overwrite the 3 Boot config files contents with the contents of the files in  those that are in home\git\boot & home\git\isolinux
+Similarly we must overwrite the 3 Boot config files contents with the contents of the files below that we downloaded
+```
+home/git/NxVMS_OS/boot/grub.cfg
+home/git/NxVMS_OS/boot/loopback.cfg
+home/git/NxVMS_OS/isolinux/txt.cfg
+```
 
 Completely overwrite and replace all the text in the existing files with the text from the git folder files
 
