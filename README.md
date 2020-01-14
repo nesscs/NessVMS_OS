@@ -8,6 +8,7 @@ This will create a bootable linux usb install disk that will wipe any computer t
 
 # Linux Basics
 Whenever you see ```~``` this means your "Home" directory
+You can paste in to the terminal using Middle Click or Clicking the Mouse wheel
 
 ## Download Cubic Tool and Git to create the ISO
 Download some tools to get your environment ready
@@ -23,11 +24,12 @@ sudo apt upgrade -y
 ```
 
 ## Download Ubuntu
-Go to http://releases.ubuntu.com/ and Select the latest LTS Desktop Image, download it to ~/Downloads
+Go to http://releases.ubuntu.com/ and Select the latest LTS Desktop Image, save/download it to ~/Downloads
 
 ## Download necessary boot files to automate installation
-There are 3 modified files that are required:
+There are 4 modified files that are required:
 /boot/grub/grub.cfg
+/boot/grub/looback.cfg
 /isolinux/txt.cfg
 /preseed/nessvms.seed
 
