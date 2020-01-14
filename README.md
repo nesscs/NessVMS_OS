@@ -6,7 +6,7 @@ MAKE SURE YOU HAVE ATLEAST 20gb SPACE AVAILABLE ON YOUR SYSTEM HDD
 # Warning
 This will create a bootable linux usb install disk that will wipe any computer that boots it automatically, don't leave it in a machine you don't want to wipe.
 
-# Linux Basics
+## Linux Basics
  - Whenever you see `~` this means your *Home* directory
  - You can paste in to the terminal using Middle Click or Clicking the Mouse wheel
 
