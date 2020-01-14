@@ -7,8 +7,8 @@ MAKE SURE YOU HAVE ATLEAST 20gb SPACE AVAILABLE ON YOUR SYSTEM HDD
 This will create a bootable linux usb install disk that will wipe any computer that boots it automatically, don't leave it in a machine you don't want to wipe.
 
 # Linux Basics
-Whenever you see ```~``` this means your "Home" directory
-You can paste in to the terminal using Middle Click or Clicking the Mouse wheel
+ - Whenever you see `~` this means your *Home* directory
+ - You can paste in to the terminal using Middle Click or Clicking the Mouse wheel
 
 ## Download Cubic Tool and Git to create the ISO
 Download some tools to get your environment ready
@@ -28,14 +28,10 @@ Go to http://releases.ubuntu.com/ and Select the latest LTS Desktop Image, save/
 
 ## Download necessary boot files to automate installation
 There are 4 modified files that are required:
-
-/boot/grub/grub.cfg
-
-/boot/grub/looback.cfg
-
-/isolinux/txt.cfg
-
-/preseed/nessvms.seed
+ - /boot/grub/grub.cfg
+ - /boot/grub/looback.cfg
+ - /isolinux/txt.cfg
+ - /preseed/nessvms.seed
 
 Clone this Git Repository to download these files
 ```
@@ -68,24 +64,23 @@ Select the working directory as ~/cubic_ubuntu
 ## Skip past the terminal modification screen
 <img src="readme_images/cubic06.png" width="70%" >
 
-## Add preseed file
+## Add the preseed file
 These steps are *critical* that you compelte correctly. 
-Add a new preseed file and call it ```nessvms.seed``` 
-Now open up the file manager and navigate to ```~/git/NxVMS_OS/preseed``` 
+Add a new preseed file and call it `nessvms.seed`
+Now open up the file manager and navigate to `~/git/NxVMS_OS/preseed`
 Open the nessvms.seed file and copy and paste the contents back in to cubic in to the new entry you have created.
 
 <img src="readme_images/cubic07.png" width="70%" >
 <img src="readme_images/cubic08.png" width="70%" >
 
 ## Edit Boot configuration files
-Similarly we must overwrite the 3 Boot config files contents with the contents of the files below that we downloaded
+Similarly we must overwrite the 3 existing boot config files contents with the contents of the files below that we downloaded
 ```
 home/git/NxVMS_OS/boot/grub.cfg
 home/git/NxVMS_OS/boot/loopback.cfg
 home/git/NxVMS_OS/isolinux/txt.cfg
 ```
-
-Completely overwrite and replace all the text in the existing files with the text from the git folder files
+Open each file with the file manager and completely overwrite and replace all the text in the existing files with the text from the git folder files by Copy/Pasting
 
 <img src="readme_images/cubic09.png" width="70%" >
 
