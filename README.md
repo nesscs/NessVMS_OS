@@ -6,19 +6,20 @@ MAKE SURE YOU HAVE ATLEAST 20gb SPACE AVAILABLE ON YOUR SYSTEM HDD
 # Warning
 This will create a bootable linux usb install disk that will wipe any computer that boots it automatically, don't leave it in a machine you don't want to wipe.
 
-## Download Cubic Tool to create the ISO
+# Linux Basics
+Whenever you see ```~``` this means your "Home" directory
+
+## Download Cubic Tool and Git to create the ISO
 Download some tools to get your environment ready
 ```
 sudo apt-add-repository ppa:cubic-wizard/release
 sudo apt update
-sudo apt install cubic
+sudo apt install cubic git
 ```
 
-## Download Git
-We need Git to download some of the working files
+## Make sure your local OS is up to date
 ```
-sudo apt install git
-
+sudo apt upgrade -y
 ```
 
 ## Download Ubuntu
@@ -62,7 +63,10 @@ Select the working directory as ~/cubic_ubuntu
 <img src="readme_images/cubic06.png" width="70%" >
 
 ## Add preseed file
-These steps are *critical* that you compelte correctly. Add a new preseed file and call it ```nessvms.seed``` Open up the file manager and navigate to home\git\preseed. Open the nessvms.seed file and copy and paste the contents back in to cubic in to the new entry you have created.
+These steps are *critical* that you compelte correctly. 
+Add a new preseed file and call it ```nessvms.seed``` 
+Now open up the file manager and navigate to ```~/git/NxVMS_OS/preseed``` 
+Open the nessvms.seed file and copy and paste the contents back in to cubic in to the new entry you have created.
 
 <img src="readme_images/cubic07.png" width="70%" >
 <img src="readme_images/cubic08.png" width="70%" >
