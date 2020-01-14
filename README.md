@@ -28,9 +28,13 @@ Go to http://releases.ubuntu.com/ and Select the latest LTS Desktop Image, save/
 
 ## Download necessary boot files to automate installation
 There are 4 modified files that are required:
+
 /boot/grub/grub.cfg
+
 /boot/grub/looback.cfg
+
 /isolinux/txt.cfg
+
 /preseed/nessvms.seed
 
 Clone this Git Repository to download these files
