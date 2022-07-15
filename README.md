@@ -4,7 +4,9 @@ Working files and tools for creating an unattended Ubuntu LTS Install. You will 
 MAKE SURE YOU HAVE ATLEAST 20gb SPACE AVAILABLE ON YOUR SYSTEM HDD
 
 # Warning
-This will create a bootable linux usb install disk that will wipe any computer that boots it automatically, don't leave it in a machine you don't want to wipe.
+Although these scripts are public facing, they are not intended for general consumption. Do not blindly run these scrips, they are unsupported. You WILL NOT receive technical support if you run these without direction.
+
+This will create a bootable linux usb install disk that will wipe any computer that boots it automatically, don't leave it in a machine you don't want to wipe. 
 
 ## Linux Basics
  - Whenever you see `~` this means your *Home* directory
@@ -38,7 +40,7 @@ Clone this Git Repository to download these files
 cd
 mkdir -p ~/git
 cd git
-git clone https://github.com/kvellaNess/NxVMS_OS.git
+git clone https://github.com/nesscs/NxVMS_OS.git
 ```
 
 Create a working Directory
@@ -111,9 +113,8 @@ Write the file to a blank USB Stick that is larger than 4gb
 Congratulations, You're done.
 Try the disk out on a new machine. REMEMBER this disk will wipe the contents of any machine you commence the install on.
 
-#### Bug or suggestion?
-Feel free to report any problem :)
-Contact Kieran for changes.
+#### Support
+There is no support! Contact Kieran for changes.
 
 ## License
 MIT License
