@@ -1,4 +1,4 @@
-# NxVMS_OS Install
+# NessVMS_OS Install
 Working files and tools for creating an unattended Ubuntu LTS Install. You will need to be running linux on your machine or a VM to create the bootable disk, the commands below will guide you. 
 
 MAKE SURE YOU HAVE ATLEAST 20gb SPACE AVAILABLE ON YOUR SYSTEM HDD
@@ -40,7 +40,7 @@ Clone this Git Repository to download these files
 cd
 mkdir -p ~/git
 cd git
-git clone https://github.com/nesscs/NxVMS_OS.git
+git clone https://github.com/nesscs/NessVMS_OS.git
 ```
 
 Create a working Directory
@@ -69,7 +69,7 @@ Select the working directory as ~/cubic_ubuntu
 ## Add the preseed file
 These steps are *critical* that you compelte correctly. 
 Add a new preseed file and call it `nessvms.seed`
-Now open up the file manager and navigate to `~/git/NxVMS_OS/preseed`
+Now open up the file manager and navigate to `~/git/NessVMS_OS/preseed`
 Open the nessvms.seed file and copy and paste the contents back in to cubic in to the new entry you have created.
 
 <img src="readme_images/cubic07.png" width="70%" >
@@ -78,9 +78,9 @@ Open the nessvms.seed file and copy and paste the contents back in to cubic in t
 ## Edit Boot configuration files
 Similarly we must overwrite the 3 existing boot config files contents with the contents of the files below that we downloaded
 ```
-home/git/NxVMS_OS/boot/grub.cfg
-home/git/NxVMS_OS/boot/loopback.cfg
-home/git/NxVMS_OS/isolinux/txt.cfg
+home/git/NessVMS_OS/boot/grub.cfg
+home/git/NessVMS_OS/boot/loopback.cfg
+home/git/NessVMS_OS/isolinux/txt.cfg
 ```
 Open each file with the file manager and completely overwrite and replace all the text in the existing files with the text from the git folder files by Copy/Pasting
 
